@@ -11,7 +11,6 @@ gem 'rack-test'
 gem 'database_cleaner', '~> 1.6.0'
 gem 'require_all'
 
-
 group :development do
   gem "capybara"
   gem "pry"
