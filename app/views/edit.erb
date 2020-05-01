@@ -1,0 +1,19 @@
+<h3>Title:  <%= @article.title%></h3>
+<p>Content: <br>
+  <%= @article.content %>
+  </p>
+
+
+<form action="/articles/<%= @article.id%>" method="POST">
+<input id="hidden" type="hidden" name="_method" value="PATCH">
+
+<label for="title">Title: </label>
+<input id="title" type="text" name="article[title]" value="/article/<%= @article.id %>"><br>
+
+<label for="content">Content:  </label>
+<textarea id="content" type="text" name="article[content]" value="/article/<%= @article.id %>">
+</textarea>
+
+<input type="submit">
+
+</form>
