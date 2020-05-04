@@ -1,0 +1,7 @@
+<%i = 1%>
+<%@articles.each do |article|%>
+<h2>Article No. <%=i%></h2>
+<p><%= article[:title]%></p>
+<p><%= article[:content]%></p>
+<%i += 1%>
+<%end%>
