@@ -1,4 +1,6 @@
-#Placeholder for a model
-
+require_relative '../../config/environment'
 class Article < ActiveRecord::Base
+
+    #### Attributes ####
+    @@all = []
 end
