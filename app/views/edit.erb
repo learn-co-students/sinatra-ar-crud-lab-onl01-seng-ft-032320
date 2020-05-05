@@ -1,0 +1,14 @@
+<body>
+    <h1>Lets change some things</h1>
+
+    <h3>Old Title: <%= @article.title %></h3>
+    <p>Old Content: <%= @article.content %></p>
+
+    <form action="/articles/<%= @article.id %>" method ="POST">
+        <input id="hidden" type="hidden" name="_method" value="PATCH">
+        <p>New Title: <input type="text" name="title"></p>
+        <p>New Content: <input type="text" name="content"></p>
+        <input type="submit" value="submit">
+    
+    </form>
+</body>
