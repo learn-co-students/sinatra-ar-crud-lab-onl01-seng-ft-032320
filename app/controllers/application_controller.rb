@@ -39,13 +39,17 @@ class ApplicationController < Sinatra::Base
   end 
 
   patch "/articles/:id" do 
+    #binding.pry
     @article = Article.find_by_id(params[:id])
-
-    if @article.update(params[title: params[:title], content: params[:content]])
+    
+    if @article 
+      @article.update(title: params[:title], content: params[:content])
+      
       redirect "/articles/#{@article.id}"
     else 
       redirect "/articles/#{@article.id}/edit"
     end
+    
   end 
 
   delete "/articles/:id/delete" do 
